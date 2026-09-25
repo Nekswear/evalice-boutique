@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <!-- Указание кодировки для корректного отображения кириллицы -->
+  <meta charset="UTF-8">
+
+  <!-- Настройка viewport для корректной адаптивности на мобильных устройствах -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Заголовок страницы в вкладке браузера -->
+  <title>Evalice Boutique — итальянская одежда в Тирасполе</title>
+
+  <!-- Описание страницы для поисковых систем (SEO) -->
+  <meta name="description" content="Evalice Boutique — бутик итальянской одежды в Тирасполе. Персональная примерка, индивидуальный подбор образа.">
+
+  <!-- Подключение таблицы стилей CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Основная фавиконка в формате SVG -->
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+<!-- Резервная PNG фавиконка -->
+<link rel="icon" type="image/png" href="favicon.png">
+
+</head>
+<body>
+
+  <!-- ==========================================================================
+       1. ШАПКА САЙТА (HEADER)
+       Фиксированная панель навигации с логотипом, ссылками и кнопкой записи
+       ========================================================================== -->
+  <header class="header">
+    <!-- .container ограничивает максимальную ширину контента и центрирует его по горизонтали -->
+    <div class="container header__inner">
+      
+      <!-- Логотип бутика. Клик ведёт наверх страницы (#) -->
+      <a class="logo" href="#">Evalice Boutique</a>
+
+      <!-- Основная навигация сайта -->
+      <nav class="nav">
+        <!-- Якорные ссылки ведут к соответствующим секциям по их id -->
+        <a class="nav__link" href="#about">О бутике</a>
+        <a class="nav__link" href="#collection">Коллекции</a>
+        <a class="nav__link" href="#process">Примерка</a>
+        <a class="nav__link" href="#contacts">Контакты</a>
+      </nav>
+
+      <!-- Быстрая кнопка записи в шапке, прокручивает к форме #booking -->
+      <a class="btn header__btn" href="#booking">Записаться</a>
+
+    </div>
+  </header>
+
+
+  <!-- ==========================================================================
+       2. ПЕРВЫЙ ЭКРАН (HERO SECTION)
+       Главный баннер с призывом к действию и завлекающим оффером
+       ========================================================================== -->
+  <section class="hero" id="hero">
+    <div class="container">
+      <!-- Главный заголовок H1 (один на всю страницу для правильного SEO) -->
+      <h1 class="hero__title">Итальянская одежда<br>в Тирасполе</h1>
+
+      <!-- Подзаголовок с ключевым УТП (уникальным торговым предложением) -->
+      <p class="hero__subtitle">Подберём образ под ваш характер. Запишитесь на персональную примерку — это бесплатно.</p>
+
+      <!-- Основная целевая кнопка первично привлекает внимание посетителя -->
+      <a class="btn btn--large" href="#booking">Записаться на примерку</a>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       3. О БУТИКЕ (ABOUT SECTION)
+       Текстовый блок о философии бренда и преимуществе работы со стилистом
+       ========================================================================== -->
+  <section class="about" id="about">
+    <div class="container">
+      <!-- .section-title — общий класс для единого стиля всех заголовков секций -->
+      <h2 class="section-title">О Evalice Boutique</h2>
+
+      <p class="about__text">Мы привозим одежду итальянских брендов, где качество ткани и посадка — главные критерии отбора.</p>
+      <p class="about__text">У нас нет тысяч одинаковых вещей: мы делаем ставку на индивидуальный подбор образа и персональную консультацию при примерке.</p>
+      
+      <!-- Выделенный плашка-акцент с бесплатной услугой стилиста -->
+      <p class="about__accent">Персональная консультация стилиста при примерке включена.</p>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       4. КОЛЛЕКЦИИ / КАТАЛОГ (COLLECTION SECTION)
+       Сетка (Grid) карточек товаров/категорий одежды
+       ========================================================================== -->
+  <section class="collection" id="collection">
+    <div class="container">
+      <h2 class="section-title">Наши коллекции</h2>
+
+      <!-- Обертка для CSS Grid сетки карточек -->
+      <div class="collection__grid">
+
+        <!-- Карточка товара 1 -->
+        <article class="product-card">
+          <!-- Изображение категории/товара. alt важен для SEO и доступности -->
+          <img class="product-card__img" src="images/1.jpg" alt="Брючный костюм">
+          <h3 class="product-card__title">Брючный костюм</h3>
+          <p class="product-card__price">от 24 900 ₽</p>
+          <a class="btn btn--small" href="#booking">Хочу примерить</a>
+        </article>
+
+        <!-- Карточка товара 2 -->
+        <article class="product-card">
+          <img class="product-card__img" src="images/2.jpg" alt="Платье">
+          <h3 class="product-card__title">Платье</h3>
+          <p class="product-card__price">от 14 900 ₽</p>
+          <a class="btn btn--small" href="#booking">Хочу примерить</a>
+        </article>
+
+        <!-- Карточка товара 3 -->
+        <article class="product-card">
+          <img class="product-card__img" src="images/3.jpg" alt="Пальто">
+          <h3 class="product-card__title">Пальто</h3>
+          <p class="product-card__price">от 32 900 ₽</p>
+          <a class="btn btn--small" href="#booking">Хочу примерить</a>
+        </article>
+
+        <!-- Карточка товара 4 -->
+        <article class="product-card">
+          <img class="product-card__img" src="images/4.jpg" alt="Блузка">
+          <h3 class="product-card__title">Блузка</h3>
+          <p class="product-card__price">от 8 900 ₽</p>
+          <a class="btn btn--small" href="#booking">Хочу примерить</a>
+        </article>
+
+        <!-- Карточка товара 5 -->
+        <article class="product-card">
+          <img class="product-card__img" src="images/5.jpg" alt="Юбка">
+          <h3 class="product-card__title">Юбка</h3>
+          <p class="product-card__price">от 9 900 ₽</p>
+          <a class="btn btn--small" href="#booking">Хочу примерить</a>
+        </article>
+
+        <!-- Карточка товара 6 -->
+        <article class="product-card">
+          <img class="product-card__img" src="images/6.jpg" alt="Комбинезон">
+          <h3 class="product-card__title">Комбинезон</h3>
+          <p class="product-card__price">от 16 900 ₽</p>
+          <a class="btn btn--small" href="#booking">Хочу примерить</a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       5. ЭТАПЫ ПРИМЕРКИ (PROCESS SECTION)
+       Пошаговое объяснение клиенту, как проходит визит в бутик
+       ========================================================================== -->
+  <section class="process" id="process">
+    <div class="container">
+      <h2 class="section-title">Как проходит примерка в Evalice?</h2>
+
+      <div class="process__steps">
+
+        <!-- Шаг 1 -->
+        <div class="process__step">
+          <!-- .process__number — круглый индикатор шага с порядковым номером -->
+          <div class="process__number">1</div>
+          <h3 class="process__step-title">Запись</h3>
+          <p class="process__step-text">Вы оставляете заявку или звоните — мы резервируем время.</p>
+        </div>
+
+        <!-- Шаг 2 -->
+        <div class="process__step">
+          <div class="process__number">2</div>
+          <h3 class="process__step-title">Подбор</h3>
+          <p class="process__step-text">Стилист заранее подбирает 3–4 образа по вашим пожеланиям.</p>
+        </div>
+
+        <!-- Шаг 3 -->
+        <div class="process__step">
+          <div class="process__number">3</div>
+          <h3 class="process__step-title">Примерка</h3>
+          <p class="process__step-text">Приходите, пьёте кофе, примеряете готовые комплекты.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       6. ФОРМА ЗАПИСИ (BOOKING SECTION)
+       Форма захвата контактов клиентов для обратного звонка/записи
+       ========================================================================== -->
+  <section class="booking" id="booking">
+    <div class="container">
+      <h2 class="section-title">Записаться на примерку</h2>
+
+      <!-- Форма с id="bookingForm" для обработки через JS (js/main.js) -->
+      <form class="booking__form" id="bookingForm">
+        <!-- Поле ввода имени (required — обязательное для заполнения) -->
+        <input class="form__input" type="text" name="name" placeholder="Ваше имя" required>
+
+        <!-- Поле ввода телефона -->
+        <input class="form__input" type="tel" name="phone" placeholder="Телефон" required>
+
+        <!-- Кнопка отправки формы -->
+        <button class="btn btn--large" type="submit">Отправить заявку</button>
+      </form>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       7. ПОДВАЛ И КОНТАКТЫ (FOOTER)
+       Адрес, режим работы, прямые ссылки на мессенджеры, соцсети и копирайт
+       ========================================================================== -->
+  <footer class="footer" id="contacts">
+    <div class="container footer__inner">
+
+      <!-- Колонки подвала -->
+      <div class="footer__col">
+        <h3 class="footer__title">Адрес</h3>
+        <p>г. Тирасполь, ул. Свердлова, 69</p>
+        <p>ГРК «Россия», вход с пер. Ярмарочного</p>
+      </div>
+
+      <div class="footer__col">
+        <h3 class="footer__title">Часы работы</h3>
+        <p>Пн–Вс: 10:00–19:00</p>
+        <p>Без перерывов и выходных</p>
+      </div>
+
+      <div class="footer__col">
+        <h3 class="footer__title">Контакты</h3>
+        <!-- Ссылка tel: открывает набор номера на мобильном устройстве -->
+        <p><a href="tel:+37377728910">+373 777 28 910</a></p>
+        <!-- Прямые ссылки в мессенджеры (WhatsApp, Viber) -->
+        <p><a href="https://wa.me/37377728910">WhatsApp</a> · <a href="viber://chat?number=%2B37377728910">Viber</a></p>
+        <!-- Ссылка на Instagram с открытием в новой вкладке (target="_blank") -->
+        <p><a href="https://instagram.com/evalice.boutique" target="_blank">Instagram @evalice.boutique</a></p>
+      </div>
+
+    </div>
+
+    <!-- Строка копирайта -->
+    <p class="footer__copy">© 2026 Evalice Boutique. Тирасполь.</p>
+  </footer>
+
+
+  <!-- ==========================================================================
+       8. МОДАЛЬНОЕ ОКНО (MODAL WINDOW)
+       Всплывающее окно благодарности, открывается через JS после отправки формы
+       ========================================================================== -->
+  <div class="modal" id="modal">
+    <div class="modal__content">
+      <h3>Спасибо!</h3>
+      <p>Мы перезвоним вам в ближайшее время.</p>
+      <!-- Кнопка закрытия модального окна (обрабатывается в js/main.js) -->
+      <button class="btn" id="modalClose">Закрыть</button>
+    </div>
+  </div>
+
+  <!-- Подключение файла скриптов JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,506 @@
+/* ==========================================================================
+   EVALICE BOUTIQUE - MAIN STYLESHEET
+   ========================================================================== */
+
+/* 1. Импорт элегантных шрифтов */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap');
+
+/* 2. CSS-переменные темы */
+:root {
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --color-bg: #FAFAFA;
+  --color-surface: #FFFFFF;
+  --color-primary: #1A1A1A;
+  --color-accent: #C5A059; /* Благородное золото */
+  --color-accent-hover: #A88442;
+  --color-text-main: #333333;
+  --color-text-muted: #777777;
+  --color-bg-alt: #F4F0EA; /* Нюдовый/кремовый оттенок */
+
+  --border-radius: 4px;
+  --transition-fast: 0.25s ease;
+  --transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.05);
+  --shadow-hover: 0 15px 35px rgba(0, 0, 0, 0.12);
+  
+  --container-width: 1140px;
+}
+
+/* 3. Базовый сброс и общие стили */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg);
+  color: var(--color-text-main);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Заголовки секций */
+.section-title {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  color: var(--color-primary);
+  letter-spacing: 0.5px;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 2px;
+  background-color: var(--color-accent);
+  margin: 15px auto 0;
+}
+
+/* 4. Кнопки (UI Component) */
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #FFFFFF;
+  background-color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  text-align: center;
+  transition: all var(--transition-fast);
+}
+
+.btn:hover {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  color: #FFFFFF;
+}
+
+.btn--large {
+  padding: 16px 36px;
+  font-size: 0.95rem;
+}
+
+.btn--small {
+  padding: 8px 18px;
+  font-size: 0.8rem;
+  background-color: transparent;
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.btn--small:hover {
+  background-color: var(--color-primary);
+  color: #FFFFFF;
+}
+
+/* 5. Шапка (Header) */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #EEEEEE;
+  padding: 15px 0;
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--color-primary);
+  text-transform: uppercase;
+}
+
+.nav {
+  display: flex;
+  gap: 30px;
+}
+
+.nav__link {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  font-weight: 400;
+  color: var(--color-text-main);
+}
+
+.nav__link:hover {
+  color: var(--color-accent);
+}
+
+/* 6. Первый экран (Hero) */
+.hero {
+  position: relative;
+  background: linear-gradient(180deg, rgba(244, 240, 234, 0.6) 0%, rgba(250, 250, 250, 1) 100%);
+  padding: 120px 0 100px;
+  text-align: center;
+}
+
+.hero__title {
+  font-family: var(--font-heading);
+  font-size: 3.8rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--color-primary);
+  margin-bottom: 20px;
+}
+
+.hero__subtitle {
+  font-size: 1.2rem;
+  color: var(--color-text-muted);
+  max-width: 600px;
+  margin: 0 auto 35px;
+  font-weight: 300;
+}
+
+/* 7. О бутике (About) */
+.about {
+  padding: 90px 0;
+  background-color: var(--color-surface);
+  text-align: center;
+}
+
+.about__text {
+  max-width: 750px;
+  margin: 0 auto 15px;
+  font-size: 1.1rem;
+  color: var(--color-text-main);
+  line-height: 1.8;
+}
+
+.about__accent {
+  max-width: 750px;
+  margin: 30px auto 0;
+  padding: 18px 24px;
+  background-color: var(--color-bg-alt);
+  border-left: 3px solid var(--color-accent);
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: 1.15rem;
+  color: var(--color-primary);
+  border-radius: 0 var(--border-radius) var(--border-radius) 0;
+}
+
+/* 8. Коллекции (Collection Grid) */
+.collection {
+  padding: 90px 0;
+}
+
+.collection__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.product-card {
+  background-color: var(--color-surface);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
+  text-align: center;
+  padding-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-hover);
+}
+
+.product-card__img {
+  width: 100%;
+  aspect-ratio: 3 / 4; /* Жестко задает верстке пропорции 3:4 */
+  object-fit: cover;
+  background-color: #EAEAEA;
+  transition: transform var(--transition-smooth);
+}
+.product-card:hover .product-card__img {
+  transform: scale(1.03);
+}
+
+.product-card__title {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 600;
+  margin: 20px 0 6px;
+  color: var(--color-primary);
+}
+
+.product-card__price {
+  font-size: 1.05rem;
+  color: var(--color-accent);
+  font-weight: 500;
+  margin-bottom: 18px;
+}
+
+.product-card .btn {
+  align-self: center;
+  margin-top: auto;
+}
+
+/* 9. Процесс примерки (Process Steps) */
+.process {
+  padding: 90px 0;
+  background-color: var(--color-bg-alt);
+}
+
+.process__steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.process__step {
+  background-color: var(--color-surface);
+  padding: 40px 30px;
+  border-radius: var(--border-radius);
+  text-align: center;
+  position: relative;
+  box-shadow: var(--shadow-card);
+}
+
+.process__number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--color-accent);
+  color: #FFFFFF;
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0 auto 20px;
+}
+
+.process__step-title {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+  color: var(--color-primary);
+}
+
+.process__step-text {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+}
+
+/* 10. Форма записи (Booking) */
+.booking {
+  padding: 90px 0;
+  background-color: var(--color-surface);
+  text-align: center;
+}
+
+.booking__form {
+  max-width: 450px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form__input {
+  width: 100%;
+  padding: 16px 20px;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  border: 1px solid #DDDDDD;
+  border-radius: var(--border-radius);
+  background-color: var(--color-bg);
+  color: var(--color-primary);
+  outline: none;
+  transition: border-color var(--transition-fast), background-color var(--transition-fast);
+}
+
+.form__input:focus {
+  border-color: var(--color-accent);
+  background-color: #FFFFFF;
+}
+
+/* 11. Подвал и контакты (Footer) */
+.footer {
+  background-color: var(--color-primary);
+  color: #CCCCCC;
+  padding: 70px 0 30px;
+  font-size: 0.95rem;
+}
+
+.footer__inner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+.footer__title {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  color: #FFFFFF;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+}
+
+.footer__col p {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.footer__col a {
+  color: #FFFFFF;
+  border-bottom: 1px transparent;
+}
+
+.footer__col a:hover {
+  color: var(--color-accent);
+}
+
+.footer__copy {
+  text-align: center;
+  border-top: 1px solid #333333;
+  padding-top: 25px;
+  font-size: 0.85rem;
+  color: #888888;
+}
+
+/* 12. Модальное окно (Modal) */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--transition-fast);
+  z-index: 2000;
+}
+
+.modal.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal__content {
+  background-color: var(--color-surface);
+  padding: 40px 50px;
+  border-radius: var(--border-radius);
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.modal__content h3 {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: var(--color-primary);
+}
+
+.modal__content p {
+  color: var(--color-text-muted);
+  margin-bottom: 25px;
+}
+
+/* 13. Адаптивность (Responsive Media Queries) */
+@media (max-width: 992px) {
+  .collection__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .header__inner {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .nav {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero__title {
+    font-size: 2.6rem;
+  }
+
+  .process__steps {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .footer__inner {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .collection__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .hero__title {
+    font-size: 2.1rem;
+  }
+}
