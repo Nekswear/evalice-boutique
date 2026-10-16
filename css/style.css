@@ -531,3 +531,44 @@ a {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* ==========================================================================
+   15. Стили для кнопок мессенджеров в модальном окне
+   ========================================================================== */
+.modal__buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.btn--messenger {
+  width: 100%;
+  text-align: center;
+  font-weight: 600;
+  border-radius: var(--border-radius);
+  transition: opacity var(--transition-fast);
+}
+
+.btn--whatsapp {
+  background-color: #25D366;
+  border-color: #25D366;
+  color: #FFFFFF;
+}
+
+.btn--telegram {
+  background-color: #229ED9;
+  border-color: #229ED9;
+  color: #FFFFFF;
+}
+
+.btn--viber {
+  background-color: #7360F2;
+  border-color: #7360F2;
+  color: #FFFFFF;
+}
+
+.btn--messenger:hover {
+  opacity: 0.9;
+  color: #FFFFFF;
+}

@@ -198,7 +198,7 @@
         <div class="process__step fade-in">
           <div class="process__number">3</div>
           <h3 class="process__step-title">Примерка</h3>
-          <p class="process__step-text">Приходите, пьёте кофе, примеряете готовые комплекты.</p>
+          <p class="process__step-text">Выверяем каждую деталь, чтобы за красивым образом видели именно вас.</p>
         </div>
 
       </div>
@@ -268,14 +268,22 @@
 
   <!-- ==========================================================================
        8. МОДАЛЬНОЕ ОКНО (MODAL WINDOW)
-       Всплывающее окно благодарности, открывается через JS после отправки формы
+       Всплывающее окно выбора мессенджера после отправки формы
        ========================================================================== -->
   <div class="modal" id="modal">
     <div class="modal__content">
-      <h3>Спасибо!</h3>
-      <p>Мы перезвоним вам в ближайшее время.</p>
-      <!-- Кнопка закрытия модального окна (обрабатывается в js/main.js) -->
-      <button class="btn" id="modalClose">Закрыть</button>
+      <h3>Заявка почти готова!</h3>
+      <p>Выберите удобный мессенджер, чтобы отправить данные в бутик:</p>
+      
+      <!-- Кнопки выбора мессенджеров -->
+      <div class="modal__buttons">
+        <a class="btn btn--messenger btn--whatsapp" id="sendWhatsApp" href="#" target="_blank">WhatsApp</a>
+        <a class="btn btn--messenger btn--telegram" id="sendTelegram" href="#" target="_blank">Telegram</a>
+        <a class="btn btn--messenger btn--viber" id="sendViber" href="#">Viber</a>
+      </div>
+
+      <!-- Кнопка закрытия -->
+      <button class="btn btn--small" id="modalClose" style="margin-top: 20px;">Закрыть</button>
     </div>
   </div>
 
